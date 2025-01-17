@@ -41,7 +41,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, computed, watch } from 'vue'
+import { reactive, watch } from 'vue'
 import { Player } from '../../../entities/player'
 import { Game } from '../../../entities/game'
 
@@ -55,11 +55,11 @@ const game = reactive<Game>(
   })
 )
 
-const takeTurn = playerIndex => {
+const takeTurn = (playerIndex: number) => {
   game.takeTurn({ playerIndex })
 }
 
-const finishRolling = playerIndex => {
+const finishRolling = (playerIndex: number) => {
   game.takeTurn({ playerIndex, type: 'stop' })
 }
 
