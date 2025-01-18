@@ -2,7 +2,7 @@
   <div class="min-h-screen grid grid-rows-[1fr,auto,1fr]">
     <!-- rotate-180 -->
     <div
-      class="grid grid-rows-[1fr,100px]"
+      class="grid grid-rows-[1fr,100px] rotate-180"
       :class="[{ 'border-2 border-red-800': game.currentPlayerIndex === 1 }]"
     >
       <button
